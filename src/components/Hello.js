@@ -3,9 +3,10 @@ import { useState } from "react";
 const Hello = () => {
 
     // Create a const with fullName and setFullName, Use State Hook with fName and lName
-    const [fullName, setFullName] = useState({
+    const [contact, setContact] = useState({
         fName: "",
-        lName: ""
+        lName: "",
+        email: ""
     });
 
     // Create a const handleChange and add an event
@@ -13,7 +14,7 @@ const Hello = () => {
     const handleChange = (event) => {
         const {value, name} = event.target
 
-        setFullName((prevValue) => {
+        setContact((prevValue) => {
             if (name === "fName") {
                 return {
                     fName: value,
@@ -24,6 +25,10 @@ const Hello = () => {
                     fName: prevValue.fName, 
                     lName: value
                 }
+            } else {
+                return {
+                    email: value 
+                }
             }
         });
     }  
@@ -32,22 +37,31 @@ const Hello = () => {
     <div className="container">
         {/* Input the const.[fName] and const[lName] in the Heading */}
         <h1>
-            Hello {fullName.fName} {fullName.lName}
+            Hello {contact.fName} {contact.lName}
         </h1>
+        <p>{contact.email}</p>
+        <br></br>
         <form>
             {/* Input onChange and value to make the function work */}
             <input
                 name="fName"
                 onChange={handleChange}
                 placeholder="First Name"
-                value={fullName.fName}
+                value={contact.fName}
             />
 
             <input
                 name="lName"
                 onChange={handleChange}
                 placeholder="Last Name"
-                value={fullName.lName}
+                value={contact.lName}
+            />
+
+            <input
+                name="email"
+                onChange={handleChange}
+                placeholder="Email"
+                value={contact.email}
             />
             <button>Submit</button>
         </form>

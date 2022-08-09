@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Hello = () => {
 
-    // Create a const with fullName and setFullName, Use State Hook with fName and lName
+    // Create a const with contact and setContact, Use State Hook with fName, lName and email
     const [contact, setContact] = useState({
         fName: "",
         lName: "",
@@ -10,23 +10,28 @@ const Hello = () => {
     });
 
     // Create a const handleChange and add an event
-    // Create a const with value and name and use it in (if-else if statement)
+    // Create a const with value and name and use it in (if-else if-else statements)
     const handleChange = (event) => {
         const {value, name} = event.target
 
+    // Input preValues when the Input is not in charged
         setContact((prevValue) => {
             if (name === "fName") {
                 return {
                     fName: value,
-                    lName: prevValue.lName
+                    lName: prevValue.lName,
+                    email: prevValue.email
                 }
             } else if (name === "lName") {
                 return {
                     fName: prevValue.fName, 
-                    lName: value
+                    lName: value,
+                    email: prevValue.email
                 }
-            } else {
+            } else if (name === "email") {
                 return {
+                    fName: prevValue.fName, 
+                    lName: prevValue.lName,
                     email: value 
                 }
             }
@@ -40,7 +45,9 @@ const Hello = () => {
             Hello {contact.fName} {contact.lName}
         </h1>
         <p>{contact.email}</p>
+
         <br></br>
+        
         <form>
             {/* Input onChange and value to make the function work */}
             <input

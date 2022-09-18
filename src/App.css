@@ -18,6 +18,8 @@ p {
   color: #7c02ff97;
 }
 
+
+
 .container {
   margin: 10% auto;
   padding: 80px 0;
@@ -46,7 +48,7 @@ input {
   display: block;
   text-align: center;
   font-size: 18px;
-  color: white;
+  color: #000;
   font-weight: 300;
 }
 

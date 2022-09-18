@@ -32,7 +32,7 @@ It is made with React JS utilizing the State Hook in React. Welcome! 👐
 
 🪟: [Desktop - Tablet - Mobile]
 
-![Desktop View - My Contacts](./src/images/desktopView.png)
-![Tablet View - My Contacts](./src/images/tabletView.png)
-![Mobile View - My Contacts](./src/images/mobileView.png)
-![Code View - My Contacts](./src/images/codeView.png)
+![Desktop View - Hello Welcome](./src/images/desktopView.png)
+![Tablet View - Hello Welcome](./src/images/tabletView.png)
+![Mobile View - Hello Welcome](./src/images/mobileView.png)
+![Code View - Hello Welcome](./src/images/codeView.png)
